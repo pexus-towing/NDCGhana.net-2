@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #006B3C;
+  --color-royal-blue: #004d2a;
+  --color-ndc-gold: #fcd116;
+  --color-ndc-red: #CE1126;
+  --color-green-accent: #006B3C;
+  --color-primary: #006B3C;
+  --color-on-primary: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-dim: #f3f4f6;
+  --color-surface-bright: #ffffff;
+  --color-surface-white: #ffffff;
+  --color-surface-variant: #f3f4f6;
+  --color-on-surface: #111827;
+  --color-on-surface-variant: #4b5563;
+  --color-outline: #9ca3af;
+  --color-outline-variant: #e5e7eb;
+  
+  --color-success: #10B981;
+  --color-info: #3B82F6;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  
+  --font-sans: "Figtree", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-header {
+    @apply bg-surface-white/70 backdrop-blur-xl border-b border-outline-variant/30;
+  }
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-royal-blue) 100%);
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+}
